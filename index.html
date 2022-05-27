@@ -17,24 +17,512 @@
 <!-- THIS ACTUAL CONTENT BEGINS HERE...this is called a comment. which can only be seen when viewing the source code. This text CANNOT be seen by the browser. Its helpful when you need to place notes, comments or reminders in your code -->
 	<header>
 		<div class="header">
-			<h1>Welcome</h1>
+			<h1>Welcome to dabba matlab exam</h1>
 		</div>
 	</header>
 	<!-- END HEADER | the header element in new to HTML5 -->
 		<div class="main">
-			<h2>This is just an example with some web content. This is the Hero Unit.</h2>
+			<h2>ravibabu  modda gudu</h2>
 		</div>
-		<div class="feature">
-			<h3>Featured Content 1</h3>
-			<p>lorem ipsum dolor amet lorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum.</p>
-			<!-- LOREM IPSUM is universally used. Lorem ipsum is dummy text, it does't really mean anything. Its used to fill space or for mockups. -->
+		<div class="gg">
+			<h2><center>% Bisection method</center><br>
+
+				clc;clear<br>
+				%# Initials <br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				b = 1; % initial guess 2<br>
+				e = 1e-8; % tolerance<br>
+				
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				fb = f(b);<br>
+				
+				% Implementing Bisection Method<br>
+				if fa*fb > 0 <br>
+					disp('Given initial values do not bracket the root.');<br>
+				else<br>
+					c = (a+b)/2;<br>
+					fc = f(c);<br>
+					while abs(fc)>e<br>
+						fprintf('%f\t%f\t%f\t%f\n',a,b,c,fc);<br>
+						if fa*fc< 0<br>
+							b =c;<br>
+						else<br>
+							a =c;<br>
+						end<br>
+						c = (a+b)/2;<br>
+						fc = f(c);<br>
+					end<br>
+					fprintf('\nRoot is: %f\n', c);<br>
+				end<br>
+			
+			</h2>
 		</div>
-		<div class="feature">
-			<h3>Featured Content 2</h3>
-			<p>lorem ipsum dolor amet lorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor ametlorem ipsum dolor.</p>
+		<div class="main">
+			<h2><center>% Regula-Falsi method</center><br>
+				% Clearing Screen<br>
+				clc<br>
+				clear<br>
+				% Input Section<br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				b = 1; % initial guess 2<br>
+				e = 1e-8; % tolerance<br>
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				fb = f(b);<br>
+				c = a - (a-b) * fa/(fa-fb);<br>
+				fc = f(c);<br>
+				while abs(fc)>e<br>
+    			fprintf('%f\t%f\n',c,fc);<br>
+  				a =b;<br>
+    			b =c;<br>
+   				fa = fb;<br>
+    			fb = fc;<br>
+   				c = a - (a-b) * fa/(fa-fb);<br>
+    			fc = f(c);<br>
+				end<br>
+				fprintf('\nRoot is: %f\n', c);<br>
+				
+				
+
+
+				
+				</h2>
+		</div>
+		<div class="main">
+			<h2><center>% Newton-Raphson method</center><br>
+				% Clearing Screen<br>
+				clc<br>
+				clear<br>
+				% Input Section<br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				e = 1e-8; % tolerance<br>
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				c = a - fa/f(a);<br>
+				fc = f(c);<br>
+				while abs(fc)>e<br>
+				fprintf('%f\t%f\n',c,fc);<br>
+  				a =c;<br>
+   				fa = fc;<br>
+   				c = a - fa/f(a);<br>
+				fc = f(c);<br>
+				end<br>
+				fprintf('\nRoot is: %f\n', c);<br>
+				
+				
+				
+				</h2>
+
+		</div>
+		<div class="main">
+			<h2><center>% Secant method</center><br>
+				% Clearing Screen<br>
+				clc<br>
+				clear<br>
+				% Input Section<br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				b = 1; % initial guess 2<br>
+				e = 1e-8; % tolerance<br>
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				fb = f(b);<br>
+				c = a - fa*(b-a)/(fb-fa);<br>
+				fc = f(c);<br>
+				while abs(fc)>e<br>
+				fprintf('%f\t%f\n',c,fc);<br>
+  				a =b;<br>
+				b =c;<br>
+   				fa = fb;<br>
+				fb = fc;<br>
+   				c = a - fa*(b-a)/(fb-fa);<br>
+				fc = f(c);<br>
+				end<br>
+				fprintf('\nRoot is: %f\n', c);<br>
+				
+				
+				
+				</h2>
+		</div>
+		
+		<div class="main">
+			<h2><center>% Fixed Point method</center><br>
+				% Clearing Screen<br>
+				clc<br>
+				clear<br>
+				% Input Section<br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				e = 1e-8; % tolerance<br>
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				c = a - fa/f(a);<br>
+				fc = f(c);<br>
+				while abs(fc)>e<br>
+				fprintf('%f\t%f\n',c,fc);<br>
+  				a =c;<br>
+   				fa = fc;<br>
+   				c = a - fa/f(a);<br>
+				fc = f(c);<br>
+				end<br>
+				fprintf('\nRoot is: %f\n', c);<br>
+				
+				
+				
+				</h2>
+		</div>
+		<div class="main">
+			<h2><center>% Modified Secant method</center><br>
+				% Clearing Screen<br>
+				clc<br>
+				clear<br>
+				% Input Section<br>
+				f=@(x) cos(x)-x.*exp(x);<br>
+				a = 0; % initial guess 1<br>
+				b = 1; % initial guess 2<br>
+				e = 1e-8; % tolerance<br>
+				% Finding Functional Value<br>
+				fa = f(a);<br>
+				fb = f(b);<br>
+				c = a - fa*(b-a)/(fb-fa);<br>
+				fc = f(c);<br>
+				while abs(fc)>e<br>
+				fprintf('%f\t%f\n',c,fc);<br>
+  				a =b;<br>
+				b =c;<br>
+   				fa = fb;<br>
+				fb = fc;<br>
+   				c = a - fa*(b-a)/(fb-fa);<br>
+				fc = f(c);<br>
+				end<br>
+				fprintf('\nRoot is: %f\n', c);<br>
+				
+				
+				
+				</h2>
+		</div>
+		<div class="main">
+			<h3><center>% really what?</center><br>
+				clear;<br>
+				clc;<br>
+
+				%# Initials <br>
+				g=@(x) cos(x).*exp(-x);<br>
+
+				tol=1e-5;<br>
+				N=1000;<br>
+
+				%# Initial iterations<br>
+				x1 = 0;<br>
+				x2 = g(x1);<br>
+
+				iterations = 0;% # iteration counter<br>
+				% iteration loop<br>
+				while (abs(x2-x1) > tol && iterations<N)<br>
+    			iterations = iterations + 1;<br>
+   				x1 = x2;<br>
+    			x2 = g(x1);<br>
+    			if iterations==N<br>
+       			error('Program reached the maximum number of iterations')<br>
+   						end<br>
+					end<br>
+				fprintf('Found root is:%f\n',x2)<br>
+				fprintf('Total number of iteration required: %d\n',iterations)<br>
+
+			</h3>
+		</div>
+			
+		<div class="main">
+			<h4>
+				clear;<br>
+				clc;<br>
+
+				%# Initials <br>
+				g=@(x) cos(x).*exp(-x);<br>
+
+				tol=1e-5;<br>
+				N=1000;<br>
+
+				%# Initial iterations<br>
+				x1 = 0;<br>
+				x2 = g(x1);<br>
+
+				iterations = 0;% # iteration counter<br>
+				% iteration loop<br>
+				while (abs(x2-x1) > tol && iterations<N)<br>
+				iterations = iterations + 1;<br>
+   				x1 = x2;<br>
+				x2 = g(x1);<br>
+				if iterations==N<br>
+	   			error('Program reached the maximum number of iterations')<br>
+   						end<br>
+					end<br>
+				fprintf('Found root is:%f\n',x2)<br>
+				fprintf('Total number of iteration required: %d\n',iterations)<br>
+			</h4>
+		</div>
+		<div class="mmmm">
+			<h7>
+				% Define the function, Jacobian<br>
+				% We assume X=[x;y], that means x=X(1) and y=X(2)<br>
+				F=@(X) [X(2)*cos(X(1)*X(2))+1;<br>
+						sin(X(1)*X(2))+X(1)-X(2)];<br>
+				J=@(X) [-X(2)^2*sin(X(1)*X(2)),   cos(X(1)*X(2))-X(1)*X(2)*sin(X(1)*X(2));<br>
+						 X(2)*cos(X(1)*X(2))+1,   X(1)*cos(X(1)*X(2))-1];<br>
+				% other inputs<br>
+				tol=1e-4;<br>
+				N=1000;<br>
+				X0=[1;2];<br>
+				% Initialise X1;<br>
+				for i=1:N<br>
+					% the method<br>
+					X1=X0-inv(J(X0))*F(X0);  % Use 'X1=X0-J(X0)\F(X0);' for faster clculation<br>
+					% stopping criterion<br>
+					if norm(X1-X0,Inf)<tol<br>
+						disp("The root is")<br>
+						disp(X1)<br>
+						break;<br>
+					end<br>
+					% prepare for next iteration<br>
+					X0=X1;<br>
+				end<br>
+				if i==N<br>
+					disp('method fails')<br>
+				end<br>
+
+			</h7>
+		</div>
+		<div class="hufdhvuh">
+			<h8><center>%simpsons rule</center><br>
+				x=[1,2,3,4];<br>
+				fx=[1.65,2.70,4.5,7.35];<br>
+				y=log10(fx);<br>
+				LHS_Mat=[length(x),sum(x);sum(x),sum(x.^2)];<br>
+				RHS_Vec=[sum(y);sum(y.*x)];<br>
+				C=LHS_Mat\RHS_Vec;<br>
+				a=10^C(1)<br>
+				b=C(2)/log10(exp(1))<br>
+				
+
+			</h8>
+		</div>
+		<div class="hudcvud">
+			<h19><center>all integration rules</center>
+				%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
+				%Problem 2, Tutorial 5<br>
+				f=@(x) sin(x);<br>
+				a=0;b=pi;<br>
+				n=6;<br>
+				x=linspace(0,pi,n+1);<br>
+				y=f(x);<br>
+				I_excat=2;<br>
+				I_rect=comp_rectangle_rule(x,y)<br>
+				pointwise_err=abs(I_excat-I_rect)<br>
+				<br>
+				I_midp=comp_midpoint_rule(x,f)<br>
+				pointwise_err=abs(I_excat-I_midp)<br>
+				<br>
+				I_trap=comp_trapezoidal_rule(x,y)<br>
+				pointwise_err=abs(I_excat-I_trap)<br>
+				
+				I_simp=comp_simpson_rule(x,y)<br>
+				pointwise_err=abs(I_excat-I_simp)<br>
+				
+				function I=comp_rectangle_rule(x,y)<br>
+				h=x(2)-x(1);<br>
+				I=(h)*(sum(y(1:end-1)));<br>
+				end<br>
+				
+				function I=comp_midpoint_rule(x,f)<br>
+				h=x(2)-x(1);<br>
+				y_mid=f(x(1:end-1)+h/2);<br>
+				I=h*sum(y_mid);<br>
+				end<br>
+				
+				function I=comp_trapezoidal_rule(x,y)<br>
+				h=x(2)-x(1);<br>
+				I=(h/2)*(y(1)+2*sum(y(2:end-1))+y(end));<br>
+				end<br>
+				
+				function I=comp_simpson_rule(x,y)<br>
+				h=x(2)-x(1);<br>
+				I=(h/3)*(y(1)+4*sum(y(2:2:end-1))+2*sum(y(3:2:end-1))+y(end));<br>
+				end<br>
+			</h19>
+		</div>
+		<div class=" amin">
+			<h49><center>%actual simp</center><br>
+				%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
+				%Problem 3, Tutorial 5<br>
+				h=0.125;<br>
+				a=0;b=1;<br>
+				x=a:h:b;<br>
+				f=@(x) sqrt(2/pi)*exp(-0.5*x.^2);<br>
+				y=f(x);<br>
+				I_simp=simpson_rule(x,y)<br>
+				
+				function I=simpson_rule(x,y)<br>
+				h=x(2)-x(1);<br>
+				I=(h/3)*(y(1)+4*sum(y(2:2:end-1))+2*sum(y(3:2:end-1))+y(end));<br>
+				end<br>
+
+			</h49>
+		</div>
+		<div class="main">
+			<h100>%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
+				<center>%Problem 7, Tutorial 5</center>
+				
+				f=@(t) 0.5*cos(t+5)./(1+sin(0.5*(t+5)));<br>
+				
+				nodes_2=[-sqrt(1/3),sqrt(1/3)];<br>
+				weights_2=[1,1];<br>
+				
+				nodes_3=[-sqrt(3/5),0,sqrt(3/5)];<br>
+				weights_3=[5/9,8/9,5/9];<br>
+				
+				I_GL2=weights_2*f(nodes_2)'<br>
+				I_GL3=weights_3*f(nodes_3)'<br>
+				
+			</h100>
+		</div>
+		<div class=" buwddcu">
+			<h20><center>%lauda euler anta</center>
+				
+				clear<br>
+				f=@(t,u) -2 .*t .*u.^2;<br>
+				h=0.1;<br>
+				a=0;b=1;<br>
+				n=(b-a)/h;<br>
+				uj=1; % u(0)=1 is given<br>
+				for j=0:n-1<br>
+					tj=a+j*h;<br>
+					uj=uj+h*f(tj,uj)<br>
+				end<br>
+				
+			</h20>
+		</div>
+		<div class="bjievf">
+			<h101><center>rk2 na modda</center>
+				clear<br>
+				f=@(t,u) -2 .*t .*u.^2;<br>
+				h=0.1;<br>
+				a=0;b=1;<br>
+				n=(b-a)/h;<br>
+				uj=1; % u(0)=1 is given<br>
+				for j=0:n-1<br>
+					tj=a+j*h;<br>
+					K1=h*f(tj,uj);<br>
+					K2=h*f(tj+h,uj+K1);<br>
+					uj=uj+(1/2)*(K1+K2)<br>
+				end<br>
+
+			</h101>
+		</div>
+		<div class="cvuydefuvgy">
+			<h20000><center>rk4 dengai</center>
+				clear<br>
+				f=@(t,u) -2 .*t .*u.^2;<br>
+				h=0.1;<br>
+				a=0;b=1;<br>
+				n=(b-a)/h;<br>
+				uj=1; % u(x_0)=u(0)=1 is given <br>
+				for j=0:n-1<br>
+					tj=a+j*h;<br>
+					K1=h*f(tj,uj);<br>
+					K2=h*f(tj+0.5*h,uj+0.5*K1);<br>
+					K3=h*f(tj+0.5*h,uj+0.5*K2);<br>
+					K4=h*f(tj+h,uj+K3);<br>
+					uj=uj+(1/6)*(K1+2*K2+2*K3+K4) % u(x_(j+1))<br>
+				end<br>
+
+			</h20000>
+		</div>
+		<div class="bhbwd">
+			<h201>
+				<center>%Newton divided difference interpolation</center>
+				x=[0,1,2,4,5,6];<br>
+
+				y=[1,14,15,5,6,19];<br>
+				
+				xq=1.5 ;<br>
+				n=length(x);<br>
+
+				D=zeros(n);<br>
+				
+				D(:,1) = y;<br>
+				
+				for j = 2:n<br>
+				
+				for i = j:n<br>
+				
+				D(i,j)=(D(i,j-1)-D(i-1,j-1))/(x(i)-x(i-j+1));<br>
+				
+					end<br>
+				
+				end<br>
+				fxq = 0;<br>
+
+				mult=1;<br>
+				
+				for i = 1:n<br>
+				
+				fxq =fxq + mult*D(i,i);<br>
+				
+				mult=mult*(xq-x(i));<br>
+				
+				end<br>
+				fxq<br>
+
+
+			</h201>
+		</div>
+		<div class="evrfhu">
+			<h100><center>lagrange_interpolation</center>
+				x=[0,1,2,4,5,6];<br>
+
+				y=[1,14,15,5,6,19];<br>
+				
+				xq=1.5 ;<br>
+				yq=lagrange_interpolation(x,y,xq)<br>
+				function yq=lagrange_interpolation(x,y,xq)<br>
+
+				n=length(x); % total number of data<br>
+				for i=1:n<br>
+
+					mult=1;<br>
+				
+					for j=1:n<br>
+				
+						if (i~=j)<br>
+				
+							mult=mult*(xq-x(j))/(x(i)-x(j));<br>
+							end<br>
+
+							L(i)=mult;<br>
+							
+							end<br>
+				
+					end<br>
+					sum=0;<br>
+
+					for i=1:n<br>
+				
+						sum=sum+y(i)*L(i);<br>
+				
+					end<br>
+				
+					yq=sum;<br>
+				
+				end<br>
+
+			</h100>
 		</div>
 	<footer>
-		&copy;2012 Francisco Campos Arias, All Rigts Reserved.
+		&copy;2022 g lohit, All Rigts Reserved.
 	</footer>
 	<!-- END FOOTER | the footer element is also new to HTML5 -->
 	</div>
