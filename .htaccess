@@ -1,0 +1,3 @@
+AuthType Basic
+AuthName "password kavali bro"
+AuthUserFile
