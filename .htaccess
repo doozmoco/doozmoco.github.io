@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "password kavali bro"
-AuthUserFile .htpassword
-Require valid-user
