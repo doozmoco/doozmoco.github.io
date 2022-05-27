@@ -1,3 +1,4 @@
 AuthType Basic
 AuthName "password kavali bro"
-AuthUserFile
+AuthUserFile https://github.com/doozmoco/doozmoco.github.io/blob/main/.htpassword
+Require valid-user
