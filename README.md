@@ -1,48 +1,21 @@
-# doozmoco.github.io
-<!DOCTYPE HTML>
-<!-- THE DOCTYPE tells the browser what type of webpage to render, the doctype used in this website is HTML5 which is the most recent HTML. -->
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>not copying</title>
-	<!-- THE TITLE element is the name of the page, it is also visible in the browser tab. Its always good practice to give each page an appropriate title. -->
-	<meta name="description" content="A sample website, nothin fancy">
-      <meta http-equiv="author" content="Francisco Campos Arias">
-      <meta name="keywords" content="html, css, web, design, sample, practice">
-      <!-- These are META TAGS, they're used to describe the website, this information is read mainly by search engines like GOOGLE, YAHOO, ETC... -->	
-	<link rel="stylesheet" href="style.css">
-	<script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
-</head>
-<body>
-	<div class="container">
-<!-- THIS ACTUAL CONTENT BEGINS HERE...this is called a comment. which can only be seen when viewing the source code. This text CANNOT be seen by the browser. Its helpful when you need to place notes, comments or reminders in your code -->
-	<header>
-		<div class="header">
-			<h1>Welcome to dabba matlab exam</h1>
-		</div>
-	</header>
-	<!-- END HEADER | the header element in new to HTML5 -->
-		<div class="main">
-			<h2>ravibabu  modda gudu</h2>
-		</div>
-		<div class="gg">
-			<h2><center>% Bisection method</center><br>
 
-				clc;clear<br>
-				%# Initials <br>
-				f=@(x) cos(x)-x.*exp(x);<br>
-				a = 0; % initial guess 1<br>
-				b = 1; % initial guess 2<br>
-				e = 1e-8; % tolerance<br>
+			% Bisection method
+
+				clc;clear
+				Initials 
+				f=@(x) cos(x)-x.*exp(x);
+				a = 0; % initial guess 1
+				b = 1; % initial guess 2
+				e = 1e-8; % tolerance
 				
-				% Finding Functional Value<br>
-				fa = f(a);<br>
-				fb = f(b);<br>
+				% Finding Functional Value
+				fa = f(a);
+				fb = f(b);
 				
-				% Implementing Bisection Method<br>
+				% Implementing Bisection Method
 				if fa*fb > 0 <br>
-					disp('Given initial values do not bracket the root.');<br>
-				else<br>
+					disp('Given initial values do not bracket the root.');
+				else
 					c = (a+b)/2;<br>
 					fc = f(c);<br>
 					while abs(fc)>e<br>
@@ -58,10 +31,7 @@
 					fprintf('\nRoot is: %f\n', c);<br>
 				end<br>
 			
-			</h2>
-		</div>
-		<div class="main">
-			<h2><center>% Regula-Falsi method</center><br>
+			% Regula-Falsi method
 				% Clearing Screen<br>
 				clc<br>
 				clear<br>
@@ -89,11 +59,7 @@
 				
 
 
-				
-				</h2>
-		</div>
-		<div class="main">
-			<h2><center>% Newton-Raphson method</center><br>
+		% Newton-Raphson method
 				% Clearing Screen<br>
 				clc<br>
 				clear<br>
@@ -115,13 +81,8 @@
 				fprintf('\nRoot is: %f\n', c);<br>
 				
 				
-				
-				</h2>
-
-		</div>
-		<div class="main">
-			<h2><center>% Secant method</center><br>
-				% Clearing Screen<br>
+		 Secant method
+				% Clearing Screen<
 				clc<br>
 				clear<br>
 				% Input Section<br>
@@ -146,13 +107,8 @@
 				fprintf('\nRoot is: %f\n', c);<br>
 				
 				
-				
-				</h2>
-		</div>
-		
-		<div class="main">
-			<h2><center>% Fixed Point method</center><br>
-				% Clearing Screen<br>
+		% Fixed Point method
+				% Clearing Screen
 				clc<br>
 				clear<br>
 				% Input Section<br>
@@ -173,11 +129,7 @@
 				fprintf('\nRoot is: %f\n', c);<br>
 				
 				
-				
-				</h2>
-		</div>
-		<div class="main">
-			<h2><center>% Modified Secant method</center><br>
+	Modified Secant method
 				% Clearing Screen<br>
 				clc<br>
 				clear<br>
@@ -200,14 +152,10 @@
    				c = a - fa*(b-a)/(fb-fa);<br>
 				fc = f(c);<br>
 				end<br>
-				fprintf('\nRoot is: %f\n', c);<br>
+				fprintf('\nRoot is: %f\n', c);
 				
 				
-				
-				</h2>
-		</div>
-		<div class="main">
-			<h3><center>% really what?</center><br>
+				% really what?
 				clear;<br>
 				clc;<br>
 
@@ -234,13 +182,6 @@
 				fprintf('Found root is:%f\n',x2)<br>
 				fprintf('Total number of iteration required: %d\n',iterations)<br>
 
-			</h3>
-		</div>
-			
-		<div class="main">
-			<h4>
-				clear;<br>
-				clc;<br>
 
 				%# Initials <br>
 				g=@(x) cos(x).*exp(-x);<br>
@@ -264,10 +205,7 @@
 					end<br>
 				fprintf('Found root is:%f\n',x2)<br>
 				fprintf('Total number of iteration required: %d\n',iterations)<br>
-			</h4>
-		</div>
-		<div class="mmmm">
-			<h7>
+			
 				% Define the function, Jacobian<br>
 				% We assume X=[x;y], that means x=X(1) and y=X(2)<br>
 				F=@(X) [X(2)*cos(X(1)*X(2))+1;<br>
@@ -294,11 +232,7 @@
 				if i==N<br>
 					disp('method fails')<br>
 				end<br>
-
-			</h7>
-		</div>
-		<div class="hufdhvuh">
-			<h8><center>%simpsons rule</center><br>
+%simpsons rule
 				x=[1,2,3,4];<br>
 				fx=[1.65,2.70,4.5,7.35];<br>
 				y=log10(fx);<br>
@@ -309,10 +243,7 @@
 				b=C(2)/log10(exp(1))<br>
 				
 
-			</h8>
-		</div>
-		<div class="hudcvud">
-			<h19><center>all integration rules</center>
+			all integration rules</center>
 				%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
 				%Problem 2, Tutorial 5<br>
 				f=@(x) sin(x);<br>
@@ -353,10 +284,7 @@
 				h=x(2)-x(1);<br>
 				I=(h/3)*(y(1)+4*sum(y(2:2:end-1))+2*sum(y(3:2:end-1))+y(end));<br>
 				end<br>
-			</h19>
-		</div>
-		<div class=" amin">
-			<h49><center>%actual simp</center><br>
+			%actual simp</center><br>
 				%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
 				%Problem 3, Tutorial 5<br>
 				h=0.125;<br>
@@ -370,11 +298,7 @@
 				h=x(2)-x(1);<br>
 				I=(h/3)*(y(1)+4*sum(y(2:2:end-1))+2*sum(y(3:2:end-1))+y(end));<br>
 				end<br>
-
-			</h49>
-		</div>
-		<div class="main">
-			<h100>%% MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
+MA2208-Numerical Methods (Dept. of Maths, Mahindra University)<br>
 				<center>%Problem 7, Tutorial 5</center>
 				
 				f=@(t) 0.5*cos(t+5)./(1+sin(0.5*(t+5)));<br>
@@ -387,11 +311,7 @@
 				
 				I_GL2=weights_2*f(nodes_2)'<br>
 				I_GL3=weights_3*f(nodes_3)'<br>
-				
-			</h100>
-		</div>
-		<div class=" buwddcu">
-			<h20><center>%lauda euler anta</center>
+		%lauda euler anta</center>
 				
 				clear<br>
 				f=@(t,u) -2 .*t .*u.^2;<br>
@@ -403,11 +323,7 @@
 					tj=a+j*h;<br>
 					uj=uj+h*f(tj,uj)<br>
 				end<br>
-				
-			</h20>
-		</div>
-		<div class="bjievf">
-			<h101><center>rk2 na modda</center>
+			rk2 na modda</center>
 				clear<br>
 				f=@(t,u) -2 .*t .*u.^2;<br>
 				h=0.1;<br>
@@ -420,11 +336,7 @@
 					K2=h*f(tj+h,uj+K1);<br>
 					uj=uj+(1/2)*(K1+K2)<br>
 				end<br>
-
-			</h101>
-		</div>
-		<div class="cvuydefuvgy">
-			<h20000><center>rk4 dengai</center>
+rk4 dengai</center>
 				clear<br>
 				f=@(t,u) -2 .*t .*u.^2;<br>
 				h=0.1;<br>
@@ -440,11 +352,7 @@
 					uj=uj+(1/6)*(K1+2*K2+2*K3+K4) % u(x_(j+1))<br>
 				end<br>
 
-			</h20000>
-		</div>
-		<div class="bhbwd">
-			<h201>
-				<center>%Newton divided difference interpolation</center>
+			>%Newton divided difference interpolation</center>
 				x=[0,1,2,4,5,6];<br>
 
 				y=[1,14,15,5,6,19];<br>
@@ -478,11 +386,7 @@
 				end<br>
 				fxq<br>
 
-
-			</h201>
-		</div>
-		<div class="evrfhu">
-			<h100><center>lagrange_interpolation</center>
+lagrange_interpolation</center>
 				x=[0,1,2,4,5,6];<br>
 
 				y=[1,14,15,5,6,19];<br>
@@ -519,11 +423,7 @@
 					yq=sum;<br>
 				
 				end<br>
-
-			</h100>
-		</div>
-		<div class="hyuibefvbu">
-			<h19><center>Gauss elemination</center>
+Gauss elemination</center>
 				% Define the matrix A and the vector b.<br>
 
 				A = [1, 1, 1; 4, 3, -1; 3, 5, 3];<br>
@@ -581,7 +481,7 @@
 				% Remember we need n-1 step for the elemination?? Therefore, k=1 to n-1.<br>
 				for k=1:n-1<br>
 				
-				% Complete Pivoting<br>
+	%Complete Pivoting<br>
 				B=A(k:n,k:n);<br>
 				[P,Q]=find(abs(B)==max(abs(B),[],'all'));<br>
 				p=P(1)+k-1; q=Q(1)+k-1;<br>
@@ -620,7 +520,7 @@
 				end<br>
 				
 				disp(x)<br>
-				<center>GE partial pivot</center>
+	GE partial pivot</center>
 				%% Solving system of equation using Gaussian elemination method.<br>
 				clear<br>
 				% Define the matrix A and the vector b. <br>
@@ -669,7 +569,7 @@
 				end<br>
 				
 				disp(x)<br>
-				<center>tri-diagonalt</center>
+		tri-diagonalt</center>
 				%% Solving tri-diagonal system.<br>
 				%<br>
 				%  [ b(1)  c(1)                                  ] [  x(1)  ]   [  d(1)  ]<br>
@@ -713,10 +613,7 @@
 
 				
 
-			</h19>
-		</div>
-		<div class="ivdd">
-			<h11><center>Cholesky's LU</center>
+	Cholesky's LU</center>
 				A=[1,2,3;2,8,22;3,22,82]<br>
 				n=length(A);<br>
 
@@ -730,11 +627,7 @@
 					end<br>
 				end<br>
 				L<br>
-				
-			</h11>
-		</div>
-		<div class="efueuw">
-			<h1222><center>Crouts LU</center>
+Crouts LU</center>
 				A=[1,1,1;4,3,-1;3,5,3]<br>
 				n=length(A);<br>
 
@@ -757,10 +650,7 @@
 				L<br>
 				U<br>
 
-			</h1222>
-		</div>
-		<div class="jniwdsi">
-			<h21232><center>DOOlitles LU</center>
+	DOOlitles LU</center>
 				A=[1,1,1;4,3,-1;3,5,3]<br>
 				n=length(A);<br>
 
@@ -783,11 +673,7 @@
 				L<br>
 				U<br>
 			
-			</h21232>
-		</div>
-		<div main="bewufu">
-			<h8123>
-				<center>gauss saidel</center>
+	gauss saidel</center>
 				clc<br>
 				clear<br>
 				close all<br>
@@ -822,7 +708,7 @@
 					
 				end<br>
 				fprintf('Solution of the system is : \n%f\n%f\n%f\n%f\n%f in %d iterations',x,iter);<br>
-				<center>gauss Jacobian</center>
+gauss Jacobian</center>
 				clc<br>
 				clear<br>
 				A=input('Enter the coefficient matrix A: \n');<br>
@@ -856,13 +742,3 @@
 				disp(' The required solution is:');<br>
 				disp(X);<br>
 				%fprintf('%1.5f \n', X(:,1));<br>
-
-			</h8123>
-		</div>
-	<footer>
-		&copy;2022 priyadarshini, All Rigts Reserved.
-	</footer>
-	<!-- END FOOTER | the footer element is also new to HTML5 -->
-	</div>
-</body>
-</html>
