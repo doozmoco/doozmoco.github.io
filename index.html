@@ -533,11 +533,21 @@
             zooming
         </h1>
         <h2>
-        img = cv2.imread('image1.jpg')<br>
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
-        zoom =cv2.resize(img,(5000,5000),interpolation=cv2.INTER_CUBIC)<br>
-        plt.imshow(zoom, cmap='gray')<br>
-        plt.show()<br>
+            
+            import cv2<br>
+            
+            img=cv2.imread("C:/Users/vinee/Desktop/3 - 1/DIP/dip lab6/image1.jpg")<br>
+            def zoom_at(img, zoom=1, angle=0, coord=None):<br>
+                
+                cy, cx = [ i/2 for i in img.shape[:-1] ] if coord is None else coord[::-1]<br>
+                
+                rot_mat = cv2.getRotationMatrix2D((cx,cy), angle, zoom)<br>
+                result = cv2.warpAffine(img, rot_mat, img.shape[1::-1], flags=cv2.INTER_LINEAR)<br>
+            
+                return result<br>
+            cv2.imshow('img',zoom_at(img, zoom=2, angle=0, coord=None))<br>
+            cv2.waitKey(0)<br>
+            cv2.destroyAllWindows()<br>
         </h2>
         <h1>
             using 3x3 mask for low pass filter
